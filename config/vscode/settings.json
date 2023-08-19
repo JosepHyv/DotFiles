@@ -1,0 +1,39 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "editor.wordWrap": "on",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": [
+        "js"
+    ],
+    "workbench.iconTheme": "vscode-icons",
+    "files.autoSave": "afterDelay",
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "php"
+    ],
+    "[php]": {
+        "editor.defaultFormatter": "valeryanm.vscode-phpsab"
+    },
+    "phpcbf.onsave": true,
+    "explorer.confirmDelete": false,
+    "telemetry.telemetryLevel": "off",
+    "glassit.alpha": 248,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "transparent-win.transparency": 0.3,
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+    "window.menuBarVisibility": "toggle",
+    "workbench.activityBar.visible": false,
+    "git.openRepositoryInParentFolders": "always",
+    "password-store": "gnome"
+    
+}
