@@ -1,0 +1,16 @@
+[alias]
+	lg = log --graph --oneline --color
+	st = status -sbu
+	sts = status --show-stash
+	b = branch 
+	ba = branch --all
+	po = push origin
+	p = pull 
+	pu = pull origin 
+	cb = branch --show-current
+	ck = checkout 
+	ckn = checkout -b
+[user]
+	email =
+	name = 
+
