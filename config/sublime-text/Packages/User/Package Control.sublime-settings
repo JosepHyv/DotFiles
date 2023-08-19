@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"C# Compile & Run",
+		"GDScript (Godot Engine)",
+		"Laravel Docs",
+		"LiveServer",
+		"Monokai Dark",
+		"More Python Completions",
+		"Package Control",
+		"Python 3",
+		"Terminal",
+		"Terminality",
+	],
+}
