@@ -5,9 +5,10 @@
         "source.fixAll.eslint": true
     },
     "eslint.validate": [
-        "js"
+        "js",
+        "jsx",
     ],
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "files.autoSave": "afterDelay",
     "eslint.probe": [
         "javascript",
@@ -17,23 +18,34 @@
         "html",
         "vue",
         "markdown",
-        "php"
+        "php",
+        "tsx",
+        "jsx"
     ],
-    "[php]": {
-        "editor.defaultFormatter": "valeryanm.vscode-phpsab"
-    },
-    "phpcbf.onsave": true,
     "explorer.confirmDelete": false,
     "telemetry.telemetryLevel": "off",
     "glassit.alpha": 248,
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "transparent-win.transparency": 0.3,
-    "[astro]": {
-        "editor.defaultFormatter": "astro-build.astro-vscode"
+    "editor.foldingImportsByDefault": true,
+    "vscode-blur-linux.opacity": 20,
+    "password-store": "gnome",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "window.menuBarVisibility": "toggle",
     "workbench.activityBar.visible": false,
-    "git.openRepositoryInParentFolders": "always",
-    "password-store": "gnome"
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+      },
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "typescript": "typescriptreact"
+      },
+    "editor.autoClosingBrackets": "always",
+    "git.openRepositoryInParentFolders": "always"
+
+    
     
 }
