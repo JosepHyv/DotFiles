@@ -1,6 +1,7 @@
 #!/usr/bin/sh
 
-pkglist=(astro-build.astro-vscode
+pkglist=(
+astro-build.astro-vscode
 bierner.color-info
 bmewburn.vscode-intelephense-client
 bradlc.vscode-tailwindcss
@@ -42,8 +43,10 @@ Vue.vscode-typescript-vue-plugin
 xabikos.JavaScriptSnippets
 xabikos.ReactSnippets
 xdebug.php-pack
-zobo.php-intellisense)
+zobo.php-intellisense
+)
 
-for i in ${pkglist}; do 
-    code --install-extension $i
+for i in "${pkglist[@]}"; do 
+    echo "installing $i"
+    code --install-extension  $i --force
 done
