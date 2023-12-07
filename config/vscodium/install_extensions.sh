@@ -13,10 +13,10 @@ donjayamanne.python-extension-pack
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
 esbenp.prettier-vscode
+expo.vscode-expo-tools
 flowtype.flow-for-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
-ID-wj.transparent-win
 kamikillerto.vscode-colorize
 magicstack.MagicPython
 mgesbert.python-path
@@ -56,5 +56,5 @@ zobo.php-intellisense
 
 for i in "${pkglist[@]}"; do 
     echo "installing $i"
-    code --install-extension  $i --force
+    codium --install-extension  $i --force
 done

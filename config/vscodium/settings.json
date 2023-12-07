@@ -4,7 +4,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "eslint.validate": ["js", "jsx"],
+  "eslint.validate": ["js", "jsx", "mjs", "tsx", "mts", "ts"],
   "workbench.iconTheme": "material-icon-theme",
   "files.autoSave": "afterDelay",
   "eslint.probe": [
@@ -17,15 +17,17 @@
     "markdown",
     "php",
     "tsx",
-    "jsx"
+    "jsx",
+    "js",
+    "mjs"
   ],
   "explorer.confirmDelete": false,
   "telemetry.telemetryLevel": "off",
-  "glassit.alpha": 248,
+  "glassit.alpha": 243,
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "transparent-win.transparency": 0.3,
-  "editor.foldingImportsByDefault": true,
-  "vscode-blur-linux.opacity": 20,
+  "transparent-win.transparency": 0.2,
+  "editor.foldingImportsByDefault": false,
+  "vscode-blur-linux.opacity": 15,
   "password-store": "gnome",
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -43,15 +45,20 @@
   "git.openRepositoryInParentFolders": "always",
   "terminal.integrated.env.linux": {},
   "editor.formatOnSave": true,
-  "window.zoomLevel": -1,
   "workbench.activityBar.location": "hidden",
   "[python]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "black-formatter.importStrategy": "fromEnvironment",
-  "black-formatter.path": [
-    "/home/josephy/.local/bin/black"
-  ]
+  "black-formatter.path": ["/home/josephy/.local/bin/black"],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "C_Cpp.default.compilerPath": "/usr/bin/g++",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": -1
 }
 
