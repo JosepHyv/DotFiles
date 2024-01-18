@@ -18,6 +18,7 @@ ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
 ms-vscode.vscode-typescript-next
+ms-vsliveshare.vsliveshare
 PKief.material-icon-theme
 pranaygp.vscode-css-peek
 SeyyedKhandon.firacode
