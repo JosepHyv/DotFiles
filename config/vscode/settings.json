@@ -1,33 +1,57 @@
 {
   "workbench.colorTheme": "Monokai",
   "editor.wordWrap": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.foldingImportsByDefault": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.minimap.autohide": true,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.autoClosingBrackets": "always",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "always"
   },
-  "eslint.validate": ["js", "jsx"],
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "js",
+    "ts",
+    "jsx",
+    "tsx"
+  ],
   "workbench.iconTheme": "material-icon-theme",
   "files.autoSave": "afterDelay",
   "eslint.probe": [
     "javascript",
-    "javascriptreact",
     "typescript",
+    "javascriptreact",
     "typescriptreact",
-    "html",
-    "vue",
-    "markdown",
-    "php",
+    "js",
+    "ts",
+    "jsx",
     "tsx",
-    "jsx"
+    "vue"
   ],
   "explorer.confirmDelete": false,
   "telemetry.telemetryLevel": "off",
-  "glassit.alpha": 248,
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "transparent-win.transparency": 0.3,
-  "editor.foldingImportsByDefault": true,
-  "vscode-blur-linux.opacity": 20,
-  "password-store": "gnome",
+  "vscode-blur-linux.opacity": 95,
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.menuBarVisibility": "toggle",
@@ -39,19 +63,17 @@
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
   },
-  "editor.autoClosingBrackets": "always",
   "git.openRepositoryInParentFolders": "always",
   "terminal.integrated.env.linux": {},
-  "editor.formatOnSave": true,
-  "window.zoomLevel": -1,
   "workbench.activityBar.location": "hidden",
   "[python]": {
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "black-formatter.importStrategy": "fromEnvironment",
-  "black-formatter.path": [
-    "/home/josephy/.local/bin/black"
-  ]
+  "black-formatter.path": ["/home/josephy/.local/bin/black"],
+  "window.commandCenter": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.sideBar.location": "right",
+  "window.zoomLevel": -1
 }
 
