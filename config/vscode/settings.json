@@ -9,7 +9,7 @@
   "editor.autoClosingBrackets": "always",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
+    "source.fixAll.eslint": true
   },
   "eslint.validate": [
     "javascript",
@@ -74,8 +74,5 @@
   "window.commandCenter": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.sideBar.location": "right",
-  "window.zoomLevel": -1,
-  "editor.fontFamily": "Fira Code",
-  "editor.fontLigatures": true
+  "window.zoomLevel": -1
 }
-

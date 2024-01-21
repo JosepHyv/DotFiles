@@ -10,10 +10,13 @@ christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
 eamodio.gitlens
 esbenp.prettier-vscode
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
 mgmcdermott.vscode-language-babel
 mhabrar.vscode-blur-linux
 ms-azuretools.vscode-docker
 ms-python.black-formatter
+ms-python.flake8
 ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
@@ -21,12 +24,13 @@ ms-vscode.vscode-typescript-next
 ms-vsliveshare.vsliveshare
 PKief.material-icon-theme
 pranaygp.vscode-css-peek
-SeyyedKhandon.firacode
+steoates.autoimport
 usernamehw.errorlens
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 Vue.volar
 Vue.vscode-typescript-vue-plugin
+YoavBls.pretty-ts-errors
 )
 
 for i in "${pkglist[@]}"; do 
