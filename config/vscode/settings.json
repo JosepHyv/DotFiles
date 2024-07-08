@@ -2,14 +2,14 @@
   "workbench.colorTheme": "Monokai",
   "editor.wordWrap": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.foldingImportsByDefault": true,
+  "editor.foldingImportsByDefault": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.minimap.autohide": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.autoClosingBrackets": "always",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "eslint.validate": [
     "javascript",
@@ -36,11 +36,11 @@
   ],
   "explorer.confirmDelete": false,
   "telemetry.telemetryLevel": "off",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "auto",
   "vscode-blur-linux.opacity": 95,
   "[javascript]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[javascriptreact]": {
     "editor.formatOnSave": true,
@@ -54,7 +54,6 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.menuBarVisibility": "toggle",
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
@@ -65,14 +64,25 @@
   },
   "git.openRepositoryInParentFolders": "always",
   "terminal.integrated.env.linux": {},
-  "workbench.activityBar.location": "hidden",
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "black-formatter.importStrategy": "fromEnvironment",
-  "black-formatter.path": ["/home/josephy/.local/bin/black"],
+  "ruff.importStrategy": "fromEnvironment",
+  "ruff.enable": true,
+  "ruff.path": ["/home/josephy/.local/bin/ruff"],
+  // "black-formatter.importStrategy": "fromEnvironment",
+  // "black-formatter.path": ["/home/josephy/.local/bin/black"],
   "window.commandCenter": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.sideBar.location": "right",
-  "window.zoomLevel": -1
+  "window.zoomLevel": -1,
+
+  "diffEditor.ignoreTrimWhitespace": false,
+  "window.menuBarVisibility": "toggle",
+  "workbench.activityBar.location": "hidden",
+  "extensions.ignoreRecommendations": true
 }
+
