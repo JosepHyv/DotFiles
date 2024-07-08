@@ -1,37 +1,40 @@
 #!/usr/bin/sh
 
 pkglist=(
-astro-build.astro-vscode
-AykutSarac.jsoncrack-vscode
+aykutsarac.jsoncrack-vscode
 bradlc.vscode-tailwindcss
-burkeholland.simple-react-snippets
+charliermarsh.ruff
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
+destcode.monokai-air
 eamodio.gitlens
 esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
-mgmcdermott.vscode-language-babel
+golang.go
 mhabrar.vscode-blur-linux
-ms-azuretools.vscode-docker
+mongodb.mongodb-vscode
 ms-python.black-formatter
+ms-python.debugpy
 ms-python.flake8
-ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
 ms-vscode.vscode-typescript-next
 ms-vsliveshare.vsliveshare
-PKief.material-icon-theme
+nichabosh.minimalist-dark
+orta.vscode-jest
+pkief.material-icon-theme
 pranaygp.vscode-css-peek
 steoates.autoimport
 usernamehw.errorlens
-VisualStudioExptTeam.intellicode-api-usage-examples
-VisualStudioExptTeam.vscodeintellicode
-Vue.volar
-Vue.vscode-typescript-vue-plugin
-YoavBls.pretty-ts-errors
+visualstudioexptteam.intellicode-api-usage-examples
+visualstudioexptteam.vscodeintellicode
+vscodevim.vim
+yoavbls.pretty-ts-errors
 )
+
+
 
 for i in "${pkglist[@]}"; do 
     echo "installing $i"
