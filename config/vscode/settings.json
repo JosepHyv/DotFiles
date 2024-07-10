@@ -1,48 +1,60 @@
 {
-  "workbench.colorTheme": "Monokai",
+  //editor settings
   "editor.wordWrap": "on",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.foldingImportsByDefault": false,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.minimap.autohide": true,
-  "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.autoClosingBrackets": "always",
   "editor.formatOnSave": true,
+  "editor.minimap.autohide": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact",
-    "js",
-    "ts",
-    "jsx",
-    "tsx"
-  ],
-  "workbench.iconTheme": "material-icon-theme",
+  "editor.autoClosingBrackets": "always",
+  "editor.foldingImportsByDefault": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  //window and workflow settings
   "files.autoSave": "afterDelay",
+  "explorer.confirmDelete": false,
+  "vscode-blur-linux.opacity": 95,
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "workbench.colorTheme": "Monokai",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "hidden",
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 0,
+  "window.commandCenter": true,
+  "window.menuBarVisibility": "toggle",
+  "git.openRepositoryInParentFolders": "always",
+
+  ///javascript and web settings
   "eslint.probe": [
+    "vue",
+    "html",
     "javascript",
     "typescript",
     "javascriptreact",
-    "typescriptreact",
-    "js",
-    "ts",
-    "jsx",
-    "tsx",
-    "vue"
+    "typescriptreact"
   ],
-  "explorer.confirmDelete": false,
-  "telemetry.telemetryLevel": "off",
-  "terminal.integrated.enableMultiLinePasteWarning": "auto",
-  "vscode-blur-linux.opacity": 95,
+  "auto-close-tag.activationOnLanguage": [
+    "ejs",
+    "erb",
+    "php",
+    "vue",
+    "xml",
+    "cfml",
+    "blade",
+    "jinja",
+    "plist",
+    "liquid",
+    "lang-cfml",
+    "HTML (EEx)",
+    "HTML (Eex)",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[javascriptreact]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -50,20 +62,24 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[typescriptreact]": {
+  "[javascriptreact]": {
+    "files.autoSave": "off",
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "emmet.syntaxProfiles": {
-    "javascript": "jsx"
+  "[typescriptreact]": {
+    "files.autoSave": "off",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "emmet.triggerExpansionOnTab": true,
+
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
   },
-  "git.openRepositoryInParentFolders": "always",
-  "terminal.integrated.env.linux": {},
+  "emmet.triggerExpansionOnTab": true,
+
+  ///other languages settings
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit"
@@ -73,16 +89,17 @@
   "ruff.importStrategy": "fromEnvironment",
   "ruff.enable": true,
   "ruff.path": ["/home/josephy/.local/bin/ruff"],
-  // "black-formatter.importStrategy": "fromEnvironment",
-  // "black-formatter.path": ["/home/josephy/.local/bin/black"],
-  "window.commandCenter": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.sideBar.location": "right",
-  "window.zoomLevel": -1,
+  "python.defaultInterpreterPath": "/usr/bin/python",
 
-  "diffEditor.ignoreTrimWhitespace": false,
-  "window.menuBarVisibility": "toggle",
-  "workbench.activityBar.location": "hidden",
+  // "[python]": {
+  //   "editor.defaultFormatter": "ms-python.black-formatter"
+  // },
+  // "black-formatter.importStrategy": "useBundled",
+  // "black-formatter.path": ["/home/joseph/.local/bin/black"],
+
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go"
+  },
   "extensions.ignoreRecommendations": true
 }
-
