@@ -2,10 +2,18 @@
   //editor settings
   "editor.wordWrap": "on",
   "editor.formatOnSave": true,
-  "editor.minimap.autohide": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.ts": "always",
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "explicit",
+    "source.sortImports": "explicit"
   },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
   "editor.autoClosingBrackets": "always",
   "editor.foldingImportsByDefault": false,
   "editor.bracketPairColorization.enabled": true,
@@ -15,15 +23,12 @@
   //window and workflow settings
   "files.autoSave": "afterDelay",
   "explorer.confirmDelete": false,
-  "vscode-blur-linux.opacity": 95,
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "workbench.colorTheme": "Monokai",
   "workbench.sideBar.location": "right",
-  "workbench.activityBar.location": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "window.zoomLevel": 0,
-  "window.commandCenter": true,
   "window.menuBarVisibility": "toggle",
   "git.openRepositoryInParentFolders": "always",
 
@@ -55,21 +60,19 @@
   ],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {
-    "editor.formatOnSave": true,
+    "files.autoSave": "off",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.formatOnSave": true,
+    "files.autoSave": "off",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
     "files.autoSave": "off",
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "files.autoSave": "off",
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
@@ -80,26 +83,144 @@
   "emmet.triggerExpansionOnTab": true,
 
   ///other languages settings
-  "[python]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    },
-    "editor.defaultFormatter": "charliermarsh.ruff"
-  },
-  "ruff.importStrategy": "fromEnvironment",
-  "ruff.enable": true,
-  "ruff.path": ["/home/josephy/.local/bin/ruff"],
-  "python.defaultInterpreterPath": "/usr/bin/python",
 
-  // "[python]": {
-  //   "editor.defaultFormatter": "ms-python.black-formatter"
-  // },
-  // "black-formatter.importStrategy": "useBundled",
-  // "black-formatter.path": ["/home/joseph/.local/bin/black"],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "black-formatter.importStrategy": "useBundled",
+  "python.defaultInterpreterPath": "/usr/bin/python",
+  "black-formatter.path": ["/home/joseph/.local/bin/black"],
 
   "[go]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "golang.go"
   },
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info", "hint"],
+
+  /// Minimalistic code-oss
+  "editor.tabCompletion": "on",
+  "explorer.openEditors.visible": 1,
+  "editor.cursorStyle": "line-thin",
+  "editor.cursorWidth": 5,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.minimap.autohide": true,
+  "breadcrumbs.enabled": false,
+  "editor.guides.indentation": false,
+  "workbench.activityBar.location": "hidden",
+
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+
+  "editor.glyphMargin": false,
+  "editor.showFoldingControls": "never",
+  "editor.padding.bottom": 2,
+  "editor.padding.top": 2,
+
+  "window.title": "",
+  "window.density.editorTabHeight": "compact",
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.showTabs": "single",
+  "editor.scrollBeyondLastLine": true,
+
+  "window.customTitleBarVisibility": "never",
+  "window.titleBarStyle": "native",
+  // "apc.electron": {
+  //   "titleBarStyle": "customButtonsOnHover",
+  //   "opacity": 0.9
+  // }
+
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 10,
+  "continue.telemetryEnabled": false,
+  "continue.enableTabAutocomplete": false,
+  "continue.enableQuickActions": true,
+
+  /// vim settings
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    ///Navigation
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    ///splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] }, //vertical split
+    { "before": ["leader", "s"], "commands": [":split"] }, //horizontal split
+
+    /// move throw splits (panes)
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    }, //move cursor to left panel
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    }, //move cursor to left panel
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    }, //move cursor to left panel
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    }, //move cursor to left panel
+
+    /// classic interaction (vscode default keybindings)
+    { "before": ["<C-w>"], "commands": [":wq!"] },
+    { "before": ["<C-s>"], "commands": [":w!"] },
+    { "before": ["<C-q>"], "commands": [":q!"] },
+    { "before": ["<C-p>"], "commands": ["workbench.action.quickOpen"] },
+
+    ///
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    { "before": ["leader", "f"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    //indent in visual mode
+    { "before": [">"], "command": ["editor.action.indentLines"] },
+    { "before": [">"], "command": ["editor.action.outdentLines"] },
+    { "before": ["<C-l>"], "command": ["continue."] }
+
+    // Move seleced lines in visual mode
+    // { "before": ["J"], "command": ["editor.action.moveLinesDownAction"] },
+    // { "before": ["K"], "command": ["editor.action.moveLinesUpAction"] },
+  ],
+  "vim.statusBarColors.normal": ["#005f5f", "#ffffff"],
+
+  /// custom color customizations
+  "workbench.colorCustomizations": {
+    "editorLineNumber.activeForeground": "#fafa07"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "foreground": "#8feb8f",
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  }
 }

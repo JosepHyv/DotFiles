@@ -1,37 +1,30 @@
 #!/usr/bin/sh
 
 pkglist=(
-aykutsarac.jsoncrack-vscode
-bradlc.vscode-tailwindcss
-charliermarsh.ruff
-christian-kohler.npm-intellisense
-christian-kohler.path-intellisense
-dbaeumer.vscode-eslint
-destcode.monokai-air
-eamodio.gitlens
-esbenp.prettier-vscode
-formulahendry.auto-close-tag
-formulahendry.auto-rename-tag
-golang.go
-mhabrar.vscode-blur-linux
-mongodb.mongodb-vscode
-ms-python.black-formatter
-ms-python.debugpy
-ms-python.flake8
-ms-python.python
-ms-python.vscode-pylance
-ms-vscode.vscode-typescript-next
-ms-vsliveshare.vsliveshare
-nichabosh.minimalist-dark
-orta.vscode-jest
-pkief.material-icon-theme
-pranaygp.vscode-css-peek
-steoates.autoimport
-usernamehw.errorlens
-visualstudioexptteam.intellicode-api-usage-examples
-visualstudioexptteam.vscodeintellicode
-vscodevim.vim
-yoavbls.pretty-ts-errors
+    astro-build.astro-vscode
+    bradlc.vscode-tailwindcss
+    continue.continue
+    dbaeumer.vscode-eslint
+    denoland.vscode-deno
+    eamodio.gitlens
+    esbenp.prettier-vscode
+    formulahendry.auto-close-tag
+    golang.go
+    llvm-vs-code-extensions.vscode-clangd
+    mgmcdermott.vscode-language-babel
+    ms-python.black-formatter
+    ms-python.debugpy
+    ms-python.flake8
+    ms-python.isort
+    ms-python.python
+    ms-vscode.vscode-typescript-next
+    pkief.material-icon-theme
+    pranaygp.vscode-css-peek
+    redwan-hossain.auto-rename-tag-clone
+    sainnhe.sonokai
+    steoates.autoimport
+    usernamehw.errorlens
+    vscodevim.vim
 )
 
 
