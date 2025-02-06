@@ -176,6 +176,9 @@
     { "before": ["<C-s>"], "commands": [":w!"] },
     { "before": ["<C-q>"], "commands": [":q!"] },
     { "before": ["<C-p>"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "a"], "commands": ["editor.action.selectAll"] },
+    { "before": ["<C-c>"], "commands": ["editor.action.clipboardCopyAction"] },
+    { "before": ["<C-x>"], "commands": ["editor.action.clipboardCutAction"] },
 
     ///
     {
@@ -206,7 +209,7 @@
     // { "before": ["J"], "command": ["editor.action.moveLinesDownAction"] },
     // { "before": ["K"], "command": ["editor.action.moveLinesUpAction"] },
   ],
-  "vim.statusBarColors.normal": ["#005f5f", "#ffffff"],
+  "vim.statusBarColors.normal": ["#004f5f", "#ffffff"],
 
   /// custom color customizations
   "workbench.colorCustomizations": {
@@ -224,3 +227,4 @@
     ]
   }
 }
+
