@@ -4,13 +4,45 @@
 	sts = status --show-stash
 	b = branch 
 	ba = branch --all
-	po = push origin
+	pu = push origin
 	p = pull 
-	pu = pull origin 
+	po = pull origin 
 	cb = branch --show-current
 	ck = checkout 
 	ckn = checkout -b
+	c = clone
+    cm = commit -m
+	lsc = log -1 HEAD
+    r = reset 
+    rr = restore 
+    lp = log -p
 [user]
 	email =
 	name = 
+    editor = nvim
+[core]
+    pager = delta
+	editor = nvim
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations
+    side-by-side = true 
+    line-numbers = true 
+    sintax-theme = "Monokai-Extended"
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+
 
