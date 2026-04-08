@@ -3,6 +3,7 @@
 echo "installing pacman packages"
 sudo pacman -Syu \
 	base-devel \
+    languagetool \
 	python \
 	go \
     zsh \
