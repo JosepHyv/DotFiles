@@ -1,0 +1,13 @@
+[Unit]
+Description=LanguageTool local server (basic)
+
+[Service]
+Type=simple
+Restart=allways
+RestartSec=1
+ExecStart=languagetool --http --port 2357 --allow-origin "*"
+Environment="PATH=$PATH"
+
+[Install]
+WantedBy=default.target
+
