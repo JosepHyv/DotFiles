@@ -16,6 +16,8 @@ alias vi='nvim'
 alias sa='source ~/.zshrc && echo 'ZSH aliases sourced' '
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias fzf="fzf --preview 'bat --style=numbers --color=always {}'"
+alias fnd='fzf'
 alias ll='exa -lh --color=automatic'
 alias lt='exa -T'
 alias clear='clear && printf '\e[3J''
