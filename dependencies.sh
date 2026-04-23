@@ -6,13 +6,15 @@ sudo pacman -Syu \
     languagetool \
 	python \
 	go \
+    exa \
+    xh \
     zsh \
 	nvm \
 	pyenv \
 	kitty \
 	neovim \
 	git-delta \
-	ollama \
+	ollama-vulkan \
 	pacman-contrib \
 	fzf \
 	fd \
@@ -48,7 +50,8 @@ makepkg -si $temp
 if [[ ! $(command -v yay) ]]; then
 	echo "installing AUR packages"
 	yay -S \
-		clipit
+        blackbox-terminal \
+        1password
 fi
 
 # Dependencies from specific languages
