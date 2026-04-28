@@ -1,0 +1,48 @@
+FROM ubuntu:24.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update && apt install -y \
+    unzip \
+    build-essential \
+    python3 \
+    python3-dev \
+    python3-pip \
+    golang \
+    libgl1-mesa-dri \
+    libgl1 \
+    libglx-mesa0 \
+    libglapi-mesa \
+    libgbm1 \
+    libosmesa6 \
+    libvulkan1 \
+    vulkan-tools \
+    mesa-utils \
+    libglib2.0-0t64 \
+    libx11-6 \
+    libxext6 \
+    libnss3 \
+    libasound2t64 \
+    libpulse0 \
+    libglu1-mesa \
+    libgtk-3-0 \
+    libxrender1 \
+    libxrandr2 \
+    libxcursor1 \
+    libxi6 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxtst6 \
+    libdbus-1-3 \
+    ca-certificates \
+    fonts-liberation \
+    && apt clean && rm -rf /var/lib/apt/lists/*
+
+RUN userdel -r ubuntu && useradd -m -u 1000 gamer
+USER gamer
+WORKDIR /home/gamer
+
+ENV LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
+ENV SHM_SIZE=2g
+
+CMD ["/bin/bash"]
