@@ -1,27 +1,53 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
-echo "installing pacman packages"
+install_qtile=false
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --qtile)
+            install_qtile=true
+            shift
+            ;;
+        *)
+            shift
+            ;;
+    esac
+done
+
+echo "installing main dependencies"
 sudo pacman -Syu \
-	base-devel \
-    languagetool \
-	python \
-	go \
-    exa \
+    ## Terminal utils
     xh \
-    zsh \
-	nvm \
-	pyenv \
-	kitty \
-	neovim \
-	git-delta \
-	ollama-vulkan \
-	pacman-contrib \
-	fzf \
 	fd \
+    zsh \
+	fzf \
+    tmux \
+    exa \
+	fnm \
 	ripgrep \
+    ## Development
+	go \
+    zed \
+	pyenv \
+	neovim \
+	python \
+    base-devel \
+    opencode \
+	pacman-contrib \
+    ## Daily Utilities
+    ufw \
+    gufw \
+    ufw-extras \
+    languagetool \
+	networkmanager \
+	ttf-jetbrains-mono \
+	ttf-jetbrains-mono-nerd \
+	noto-fonts
+
+## Installing dependencies for qtile config
+if [ "$install_qtile" = true ]; then
+sudo pacman -Syu \
 	qtile \
-	xfce4 \
-	xfce4-goodies \
 	picom \
 	rofi \
 	network-manager-applet \
@@ -35,11 +61,12 @@ sudo pacman -Syu \
 	pavucontrol \
 	alsa-utils \
 	pipewire-pulse \
-	ttf-jetbrains-mono \
-	ttf-jetbrains-mono-nerd \
 	ttf-nerd-fonts-symbols \
-	ttf-nerd-fonts-symbols-mono \
-	noto-fonts
+	ttf-nerd-fonts-symbols-mono
+fi
+
+# Installing tmux tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # installing yay for aur packages
 echo "installing yay for aur packages"
@@ -51,7 +78,9 @@ if [[ ! $(command -v yay) ]]; then
 	echo "installing AUR packages"
 	yay -S \
         blackbox-terminal \
-        1password
+        1password \
+        zen-browser-bin \
+        zed
 fi
 
 # Dependencies from specific languages
@@ -59,4 +88,4 @@ fi
 # NodeJs dependencies
 npm install -g prettier@latest eslint@latest yarn@latest pnpm@latest bun@latest
 
-pip install black ruff oterm
+pip install black ruff  poetry

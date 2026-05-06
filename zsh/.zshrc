@@ -2,10 +2,11 @@ export ZSH='$HOME/.oh-my-zsh'
 
 ZSH_THEME='josephy'
 
-plugins=(git fnm archlinux fzf z vim-interaction)
+plugins=(git fnm archlinux fzf z)
 
 source $ZSH/oh-my-zsh.sh
 #My aliases
+
 alias cph='~/Contest-Archive/scripts/cphelper/./script.py'
 alias bp='nvim ~/.zshrc'
 alias http='xh'
@@ -16,22 +17,12 @@ alias vi='nvim'
 alias sa='source ~/.zshrc && echo 'ZSH aliases sourced' '
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
-alias fzf="fzf --preview 'bat --style=numbers --color=always {}'"
-alias fnd='fzf'
+alias fnd="fzf --preview 'bat --style=numbers --color=always {}'"
 alias ll='exa -lh --color=automatic'
 alias lt='exa -T'
 alias clear='clear && printf '\e[3J''
-alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
-alias cpp='$HOME/Contest-Archive/./autocpp.sh'
 alias rm='rm -v'
-alias bateria='upower -i `upower -e | grep -i bat`'
-alias auronix='cd ${HOME}/Auronix'
-alias fjsd='auronix && cd Inbound/flows-js-scripts-Delivery'
-alias estafeta='fjsd && cd bots/EstafetaRefactorV2'
-alias inbound='auronix && cd Inbound'
-alias ia='auronix && cd IA'
-#alias gpl='git pull origin $(git branch --show-current)'
-#alias gpo='git push origin $(git branch --show-current)'
+
 #########################################
 #My Exported variables
 #export TERM=konsole-256color
@@ -62,33 +53,15 @@ ex()
 		fi
 }
 
-gpl()
-{
-    if [ -f '.git'] ; then
-        git pull $(git branch --show-current)
-    else
-        echo 'No es un directorio de git'
-    fi
-}
-
-gpo()
-{
-    if [ -f '.git'] ; then
-        git push origin $(git branch --show-current)
-    else
-        echo 'No es un directorio de git'
-    fi
-}
 
 export PATH='$PATH:$HOME/.local/bin:$HOME/go/bin'
-export PRIMARY_SCREEN_WALLPAPER='whitesur'
-export SECONDARY_SCREEN_WALLPAPER='norddark'
 export PYENV_ROOT='$HOME/.pyenv'
 [[ -d $PYENV_ROOT/bin ]] && export PATH='$PYENV_ROOT/bin:$PATH'
 eval '$(pyenv init -)'
 export DENO_INSTALL='/home/josephy/.deno'
 export PATH='$DENO_INSTALL/bin:$PATH'
 export NODE_ENV='development'
+
 # bun completions
 [ -s '/home/josephy/.bun/_bun' ] && source '/home/josephy/.bun/_bun'
 
@@ -99,8 +72,6 @@ export PATH='$BUN_INSTALL/bin:$PATH'
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-# opencode
-export PATH=/home/josephy/.opencode/bin:$PATH
 
 # fnm
 FNM_PATH='/home/josephy/.local/share/fnm'
