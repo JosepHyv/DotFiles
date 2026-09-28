@@ -42,7 +42,9 @@ sudo pacman -Syu \
 	networkmanager \
 	ttf-jetbrains-mono \
 	ttf-jetbrains-mono-nerd \
-	noto-fonts
+	noto-fonts \
+    chromium \
+    librewolf
 
 ## Installing dependencies for qtile config
 if [ "$install_qtile" = true ]; then
@@ -74,18 +76,30 @@ temp=${mktemp -d}
 git clone https://aur.archlinux.org/yay.git $temp
 
 makepkg -si $temp
+
+
 if [[ ! $(command -v yay) ]]; then
 	echo "installing AUR packages"
 	yay -S \
         blackbox-terminal \
         1password \
-        zen-browser-bin \
-        zed
+        fuzzy-pkg-finder
 fi
 
 # Dependencies from specific languages
 
+if [[ ! $(command -v fnm) ]]; then
+    echo "installig latest node version"
+    fnm install 26
+fi
+
+if [[ ! $(command -v node) ]]; then
+    echo "Setting Up Node"
+    npm install -g corepack
+    corepack enable pnpm
+fi
+
 # NodeJs dependencies
-npm install -g prettier@latest eslint@latest yarn@latest pnpm@latest bun@latest
+pnpm install -g prettier@latest eslint@latest yarn@latest pnpm@latest bun@latest
 
 pip install black ruff  poetry
