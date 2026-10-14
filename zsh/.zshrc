@@ -71,9 +71,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-# fnm
-FNM_PATH="/home/josephy/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "$(fnm env)"
+## fnm via pacman
+if [ $(command -v fnm) ]; then
+    eval "$(fnm env)"
+    eval "$(fnm env --use-on-cd)"
 fi
+
+
