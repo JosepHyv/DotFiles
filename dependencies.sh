@@ -22,6 +22,7 @@ sudo pacman -Syu \
     zsh \
 	fzf \
     tmux \
+    less \
     exa \
 	fnm \
 	ripgrep \
