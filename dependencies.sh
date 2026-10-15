@@ -108,4 +108,7 @@ fi
 # NodeJs dependencies
 pnpm add -g prettier@latest eslint@latest yarn@latest bun@latest @colbymchenry/codegraph@latest
 
+# Python dependencies
 pip install black ruff  poetry
+
+
