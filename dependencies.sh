@@ -96,11 +96,16 @@ fi
 
 if [[ ! $(command -v node) ]]; then
     echo "Setting Up Node"
-    npm install -g corepack
+    npm install -g corepack@latest
     corepack enable pnpm
 fi
 
+if [[ ! $(command -v pnpm) ]]; then
+    echo "Setting up pnpm"
+    pnpm setup
+fi
+
 # NodeJs dependencies
-pnpm install -g prettier@latest eslint@latest yarn@latest pnpm@latest bun@latest
+pnpm add -g prettier@latest eslint@latest yarn@latest bun@latest @colbymchenry/codegraph@latest
 
 pip install black ruff  poetry

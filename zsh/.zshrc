@@ -77,4 +77,6 @@ if [ $(command -v fnm) ]; then
     eval "$(fnm env --use-on-cd)"
 fi
 
+export PNPM_PATH="$HOME/.local/share/pnpm/bin"
+export PATH="$PNPM_PATH:$PATH"
 
