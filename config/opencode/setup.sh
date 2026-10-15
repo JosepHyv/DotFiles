@@ -17,8 +17,8 @@ fi
 
 echo "Adding plugins to opencode"
 
-opencode plugin add ponytail
-opencode plugin add context7
+opencode plugin add @dietrichgebert/ponytail
+# opencode plugin add context7
 
 
 echo "Moving config"
